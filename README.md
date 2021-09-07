@@ -12,6 +12,7 @@
 1. Once this is done, you will make a **pull request** from your forked repo to the main repo. Once you make this request, someone with
    write access to the repo will review it and merge your code. 
 
+To see the entire process with images : https://medium.com/analytics-vidhya/getting-started-making-a-pull-request-d6dcc9bc6d66
 **Task** : 
 Make a fork of this repo, clone it, add a file <yourname.txt> and commit. Now, make a pull request to this repository. 
 
