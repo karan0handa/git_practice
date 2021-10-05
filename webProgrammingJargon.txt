@@ -1,0 +1,109 @@
+HTML			HTML dates back to when the world wide web started. It was just a way		1989
+			to markup (ie. structure) documents that would be exchanged on www. 
+
+
+STYLE TAGS		But people want pretty things. So came along tags like <FONT>, <COLOR>,
+			<BOLD>, <BIG> etc. How document is structured (aka. markup) and how it 
+			looks (aka. Purely presentational stuff like whether heading is pink or
+			 blue) start to mix up together. 
+
+CSS			Markup shouldn't have things like "This heading should be big with a color	1996
+			that's pinkish-red with the cursive font". To just say "A heading"
+			and describe the content of the heading is simpler. If it needs to look
+			different, write it somewhere else, and it shouldn't get in the face of
+			someone editing HTML. CSS came early, but it took decades to adopt. 
+
+JavaScript		Browsers could only display static pages until 1995. In 1995, NetScape 		1995
+			(now Mozilla) hired Brendan Eich to add a scripting language to their 
+			browser. They named the language 'LiveScript' when released in beta, 
+			but the name was changed to 'JavaScript' later. This might have been a 
+			marketing decision, but this has caused much confusion for those 
+			unfamiliar with the language, since they relate it with Java. 
+
+ECMAScript		Mozilla submitted a draft to formalise the language to ECMA International.	1997
+			This was for standardisation. Think of this : A lot of the keyboards you 
+			buy have the same layout, because there is a standard qwerty layout. To
+			make sure that different browsers support the same-ish version of Javascript
+			, ECMA started working on ECMAScript standard. JavaScript adheres to this
+			standard, but the standard could be used for writing any scripting language.
+			Therefore, when new drafts of ECMAScript come out, new features are added
+			to JavaScript. 
+
+
+Browser Wars !!! 	----										1995-2017
+
+
+Chrome v8 engine	Javascript engines are things that compile and execute Javascript. Chrome's	2008
+			v8 engine does compilation to native machine code right before execution. 
+			This gives a major speed boost. 
+
+NodeJS			Ryan Dahl takes the v8 engine outside of the browser, and uses it to write	2009
+			an environment that can execute Javascript in the command line itself. This
+			has major implications, since system software, command line tools etc. as 
+			well as servers, (and pretty much anything you can think of) could be written
+			using Javascript now. 
+
+			
+NPM			The concept of libraries (or 'packages', as they're called), was absent from 
+			JavaScript in the browser. However, bringing Javascript to the backend with 
+			node meant that we had to somehow be able to create and import libraries. 
+			(Since all other system languages - C, Python, Java etc. have it)
+						Node created their own package-management system called NPM.
+			It uses a style of importing/exporting called CommonJS. Now, ECMAScript has 
+			rolled out a standard way of importing, so the CommonJS version and ECMAScript
+			version of imports and exports exists simultaneously. 
+			(For more on this : Check out Chapter 'Modules' in Eloquent Javascript)
+			
+			You can publish or download packages using npm. To download a package, just issue
+			'npm install chowkidar' in the terminal. This command installs a package called
+			chowkidar, and now I can use it in my code. 
+
+React/Angular		Computers take quite a lot of processing power to draw things in browsers. This
+			isn't a problem unless you're using JavaScript to move things around a lot on the
+			page. In that case, if you're changing what's on the browser screen frequently,
+			the computer will likely hang. So instead of using JavaScript to directly alter
+			the browser, React/Angular alter a scratchpad instead. Then they compare the
+			scratchpad to what is on the screen and draw ONLY the differences between the 
+			scratchpad and screen, on the screen. There are other things they do as well.
+
+Declarative code	Declarative knowledge tells you 'what is'. Imperative knowledge tells you 'how to'.
+vs Imperative code	For example, take this definition of square root : 
+			"Square root of x is a number y, such that y*y = x". This definition tells you what
+			a square root is. But this doesn't tell you how to find a square root. This is therefore,
+			a declarative sentence. 
+			Now take this :
+			"Start with x=1. 
+			If x*x = y, x is the square root of y. 
+			Otherwise, change x to (y/x + x)/2 and repeat the step above"
+			The above procedure is imperative. It tells you HOW to find a square root. The 
+			declarative version is much simpler, but it doesn't tell us the how. It would be great if
+			we could be more declarative and less imperative in describing things, and computer would
+			still know the HOW part without us having to tell it that. 
+
+			React allows you to write declarative code. 
+
+Servers			These are just programs running on a computer, that get requests and respond back to those 
+			requests. These programs might set cookies, ask for passwords before allowing a request 
+			through, make calls to database etc.
+
+MongoDB			This is just a database software. It's starkly different from SQL though.
+
+Schema			We don't just stash data in a database. We give it a structure. Basically, we describe 
+			*Entities* and *relationships* between those entities. A dating website could have, for
+			example, a Person entity, and a *swipedRight* relationship that describes the relationship
+			between two Persons. There could be a *dating* relationship between two Persons as well. 
+			Deciding all these entities, and all the relationships and what properties each entity and
+			relationship has comes under Schema design. It's after schemas are designed that we start to
+			store data that fits those schemas. 
+
+Mongoose		This is a library that makes the Schema management part easier. 
+
+Express			This is a library that makes writing servers easier.
+
+API calls		A user has clicked the 'buy now' button on your website, and you need to now inform the server
+			to change the stock and make the order. How do you inform ? You make an API call. API is like
+			knobs that the server exposes to the frontend, and can be accessed by making API calls. Front
+			end doesn't have direct access to databases etc. that would be so inviting for crackers. We 
+			just have access to the API. 
+
+GraphQL			This is one, very new way to write APIs. It does make the process of writing APIs easier. 
